@@ -6,23 +6,35 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/c508233717.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Reservia - Trouver votre hébergement pour des vacances de rêve</title>
 </head>
 
 <body>
     <header id="header">
         <div id="logo">
-            <img src="images/logo/Reservia.png" alt="logo de Reservia" width="100px">
+            <img src="images/logo/Reservia.png" alt="logo de Reservia">
+        </div>
+        
+        <div id="register">
+            <a href="#" title="Inscrivez-vous sur Reservia">
+                <p>S'inscrire</p>
+            </a>
         </div>
 
         <nav id="header-nav">
-            <ul>
-                <li><a href="#accommodation" title="Hébergements liés à votre recherche" class="anchor">Hébergements</a>
-                </li>
-                <li><a href="#activities" title="Activités liées à votre recherche" class="anchor">Activités</a></li>
-                <li><a href="#" title="Inscrivez-vous sur Reservia"><span id="register">S'inscrire</span></a></li>
-            </ul>
+            <div class="nav-div">
+                <a href="#accommodation" title="Hébergements liés à votre recherche" class="anchor">
+                    <p>Hébergements</p>
+                </a>
+            </div>
+            <div class="nav-div">
+                <a href="#activities" title="Activités liées à votre recherche" class="anchor">
+                    <p>Activités</p>
+                </a>
+            </div>
         </nav>
+
     </header>
 
     <main>
@@ -35,7 +47,7 @@
                 <!-- ADD aria-hidden="true" so icons visible in browser but invisible for assistive technology -->
                 <!-- search box -->
                 <div id="search-box">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas fa-map-marker-alt grey-background"></i>
                     <input type="search" placeholder="Marseille, France" name="search" id="search" />
                     <input type="submit" value="Rechercher" name="submit" id="submit" class="white-on-blue-icon" />
                     <button type="button"><i class="fas fa-search white-on-blue-icon"></i></button></a>
@@ -43,29 +55,41 @@
 
                 <!-- filters -->
                 <div id="filters">
-                    Filtres
-                    <input type="checkbox" name="economical" id="economical" />
-                    <span class="blue-icon blue-background"><i class="fas fa-money-bill-wave"></i></span><label
-                        for="economical">Économique</label>
-                    <input type="checkbox" name="family" id="family" />
-                    <span class="blue-icon blue-background"><i class="fas fa-child"></i></span><label
-                        for="family">Familial</label>
-                    <input type="checkbox" name="romantic" id="romantic" />
-                    <span class="blue-icon blue-background"><i class="fas fa-heart"></i></span><label
-                        for="romantic">Romantique</label>
-                    <input type="checkbox" name="animals" id="animals" />
-                    <span class="blue-icon blue-background"><i class="fas fa-dog"></i></span><label
-                        for="animals">Animaux autorisés</label>
+                    <p>Filtres</p>
+                    <div id="filters-checkbox">
+                        <div>
+                            <input type="checkbox" name="economical" id="economical" />
+                            <i class="fas fa-money-bill-wave blue-icon blue-background"></i>
+                            <label for="economical">Économique</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="family" id="family" />
+                            <i class="fas fa-child blue-icon blue-background"></i>
+                            <label for="family">Familial</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="romantic" id="romantic" />
+                            <i class="fas fa-heart blue-icon blue-background"></i>
+                            <label for="romantic">Romantique</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="animals" id="animals" />
+                                <i class="fas fa-dog blue-icon blue-background"></i>
+                            <label for="animals">Animaux autorisés</label>
+                        </div>
+                    </div>
                 </div>
             </form>
 
-            <p>
-                <span class="fa-stack fa-1x">
-                    <i class="fas fa-info fa-stack-1x blue-icon"></i>
-                    <i class="far fa-circle fa-stack-2x grey-icon"></i>
-                </span>
-                Plus de 500 logements sont disponibles dans cette ville
-            </p>
+            <div id="info">
+                <div>
+                    <span class="fa-stack fa-1x">
+                        <i class="fas fa-info fa-stack-1x blue-icon"></i>
+                        <i class="far fa-circle fa-stack-2x grey-icon"></i>
+                    </span>
+                </div>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
         </section>
 
         <section id="accommodation-popular">

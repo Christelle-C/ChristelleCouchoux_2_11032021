@@ -29,18 +29,17 @@
 
 /* general */
 
+
 body
 {
-    font-family: ralewayregular, arial, verdana, sans-serif;
+    font-family: 'ralewayregular', 'arial', 'verdana', 'sans-serif';
     font-size: 0.9em;
     color: black;
-    width: 100%;
-    margin:auto;
 }
 
 h1, h2, h3, h4, form
 {
-    font-family: ralewaybold, arial, verdana, sans-serif;
+    font-family: ralewaybold, 'arial', 'verdana', 'sans-serif';
 } 
 
 
@@ -98,58 +97,70 @@ a[href^="mailto"]
 /* borders to be removed, just to see parts more cleraly while working */
 header
 {
-    margin: 0 50px 0 50px;
-
+    border: #0065FC solid 2px;
+    width: 100%;
+    min-width: 375px;
+    padding: 20px 10px;
 }
 
 footer
 {
     width: 100%;
+    min-width: 375px;
     background-color: #F2F2F2;
-    margin: 0;
+    padding: 20px 10px;
     line-height: 2em;
 }
 
 #search-section
 {
-    margin: 0 50px 20px 50px;
+    border: solid 2px violet;
+    width: 100%;
+    min-width: 375px;
+    padding: 20px 10px;
     line-height: 1em;
 }
 
 
 #accommodation-popular
 {
-    height: 625px;
-    margin: 0 50px 50px 50px;
+    width: 100%;
+    min-width: 375px;
+    height: auto;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-between;
 }
 
 
 #accommodation
 {
-    width: 60%;
-    background-color: #F2F2F2;
-    border-radius: 25px;
-    padding: 30px;
+    border: turquoise solid 2px;
+    width: 100%;
+    min-width: 375px;
+    height: auto;
+    padding: 20px 10px;
     line-height: 0em;
 }
 
 #popular
 {
-    width: 28%;
+    border: turquoise solid 2px;
+    width: 100%;
+    min-width: 375px;
+    height: auto;
     background-color: #F2F2F2;
-    border-radius: 25px;
-    padding: 30px;
+    padding: 20px 10px;
     line-height: 0em;
 }
 
 #activities
 {
-    height: 550px;
-    margin: 0 50px 50px 50px;
-    display: flex;
-    flex-direction: column;
+    border: mediumorchid solid 2px;
+    width: 100%;
+    min-width: 375px;
+    height: auto;
+    padding: 20px 10px;
 }
 
 
@@ -162,50 +173,89 @@ footer
 
 #header
 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10px;
+    font-size: 1.2em;
+}
+
+
+#logo img
+{
+    width: 100px;
+    padding: 0 10px;
+}
+
+#register 
+{
+    padding: 0 10px;
+}
+
+#register p
+{
+    color: #0065FC;
+    font-family: ralewaybold;
+}
+
+#header-nav 
+{
+    border: hotpink solid 2px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 50px 0 20px 0;
 }
 
-#header-nav
+.nav-div
 {
-    width: 35%;
+    border: rgb(9, 187, 231) solid 2px;
+    width: 100%;
+    text-align: center;
 }
 
-#header-nav ul
-{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-}
 
 
 .anchor:focus
 {
     color: #0065FC;
-    text-decoration: overline;
 }
 
 .anchor:hover
 {
     color: #0065FC;
-    text-decoration: overline;
 }
 
-#register
-{
-    color: #0065FC;
-    font-weight: bold;
-}
 
 
 
 /* search section */
 
+#search-section 
+{
+    font-size: 1.15em; 
+    line-height: 1.2em;
+}
+
+#search-section h1
+{
+    line-height: 1.1em;
+}
+
+
+#info
+{
+  display: flex;
+  justify-content: center;
+  align-items: baseline; 
+  width: 100%;
+}
+
+
 #search-box
 {
-    width: 50%;
     display: flex;
     height: 50px;
 }
@@ -235,11 +285,24 @@ footer
     color: rgb(233, 232, 232);   
 }
 
-.fa-stack 
-{ 
-    font-size: 0.5em; 
+.grey-background
+{
+    background-color: #f2f2f2;
 }
 
+
+
+#filters
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#filters-checkbox
+{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
@@ -251,10 +314,13 @@ footer
 
 #accommodation-list
 {
-    width: 100%;
+    border: orange solid 2px;
+    width: auto;
+    height: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -264,11 +330,13 @@ footer
     box-shadow: 5px 5px 5px rgb(233, 232, 232);
     border-radius: 20px;
     padding: 5px;
-    margin: 15px 0 15px 0;
-    width: 240px;
-    height: 200px;
-    line-height: 0.5em;
+    margin: 15px 0;
+    min-width: 330px; /* at 375px previews too large */
+    max-width: 500px;
+    height: 195px;
+    line-height: 0.3em;
 }
+
 
 
 .accommodation-text
@@ -292,7 +360,10 @@ footer
 }
 
 
-
+#accommodation h2
+{
+    width: 100%;
+}
 
 
 /* popular section */
@@ -312,8 +383,9 @@ footer
 
 #popular-list
 {
-    width: 100%;
-    height: 550px;
+    border: orange solid 2px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -327,12 +399,14 @@ footer
     box-shadow: 5px 5px 5px rgb(233, 232, 232);
     border-radius: 20px;
     padding: 5px;
-    margin: 10px 0 10px 0;
-    width: 345px;
+    margin: 15px 0;
+    min-width: 330px; /* at 375px previews too large */
+    max-width: 500px;
     height: 145px;
     line-height: 0.5em;
-    display: flex;
-    flex-direction: row;
+    display: flex; /* flex changes size of au coeur de l'eau */
+    flex-direction: row; /* without flex all the same size but still smaller than 500px */
+    align-items: center;
 }
 
 
@@ -346,7 +420,8 @@ footer
 
 #popular img 
 {
-    width: 145px;
+    min-width: 145px;
+    max-width: 145px;
     height: 145px;
     object-fit: cover;
     border-radius: 20px 0 0 20px ;
@@ -356,16 +431,17 @@ footer
 
 
 
-
 /* activities section */
 
 #activities-list
 {
-    width: 100%;
-    height: 500px;
+    border: orangered solid 2px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -374,8 +450,9 @@ footer
     background-color: #ffffff;
     box-shadow: 5px 5px 5px rgb(233, 232, 232);
     border-radius: 20px;
-    padding: 5px;
     margin: 15px 0 15px 0;
+    min-width: 330px;
+    max-width: 500px;
     line-height: 0.5em;
 }
 
@@ -384,32 +461,32 @@ footer
 /* different sizes of previews */
 .portrait
 {
-    width: 300px;
-    height: 445px;
+    width: 90%;
+    height: 190px;
 }
 
 .small
 {
-    width: 300px;
-    height: 165px; 
+    width: 90%;
+    height: 190px;
 }
 
 .smallmedium
 {
-    width: 300px;
-    height: 195px;  
+    width: 90%;
+    height: 190px; 
 }
 
 .bigmedium
 {
-    width: 300px;
-    height: 210px;  
+    width: 90%;
+    height: 190px; 
 }
 
 .large
 {
-    width: 300px;
-    height: 240px; 
+    width: 90%;
+    height: 190px;
 }
 
 
@@ -417,40 +494,40 @@ footer
 /* different sizes of images */
 .portrait img
 {
-    width: 300px;
-    height: 390px;
+    width: 100%;
+    height: 135px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 
 .small img
 {
-    width: 300px;
-    height: 110px; 
+    width: 100%;
+    height: 135px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 
 .smallmedium img
 {
-    width: 300px;
-    height: 140px; 
+    width: 100%;
+    height: 135px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 
 .bigmedium img
 {
-    width: 300px;
-    height: 155px; 
+    width: 100%;
+    height: 135px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 
 .large img
 {
-    width: 300px;
-    height: 185px; 
+    width: 100%;
+    height: 135px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
@@ -460,7 +537,7 @@ footer
 
 #activities h4 /* .activities-text */
 {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 20px;
 }
 
 
@@ -474,18 +551,19 @@ footer
 #footer-nav
 {
     display:flex;
-    justify-content: start;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #footer-nav section
 {
-    margin: 40px;
+    padding: 10px 0 10px 30px;
     text-align: left;
 }
 
 #nav-about, #nav-accommodation, #nav-assistance
 {
-    width: 30%;
+    width: 100%;
     text-align: left;
 }
 
@@ -495,10 +573,10 @@ footer
 
 
 
-/* responsive */
+/* responsive design */
 
-/* phone */
-@media all and (max-width:600px)
+/* mobile portrait 375-480px (default) */
+@media all and (min-width:375px)
 {
     body 
     {
@@ -507,36 +585,40 @@ footer
     }
 }
 
-/* tablet */
-@media all and (max-width:1024px)
+/* mobile landscape/ tablet portrait 480-768px */
+@media all and (min-width:480px)
 {
-    body 
-    {
-        width:100%;
-    }
+   
 }
 
-/* laptop/computer */
-@media all and (max-width:1280px)
+/* tablet landscape / large tablet 768-992px */
+@media all and (min-width:768px)
 {
-    body 
-    {
-        width:100%;
-    }
+   
 }
 
-/* large screen */
+
+
+/* large tablet landscape / laptop, desktop 992-1280px */
+@media all and (min-width:1024px)
+{
+    
+
+
+    /* large screens > 1280-1440px */
 @media all and (min-width:1280px)
 {
+    
+
+
+/* super large screens > 1440px */
+@media all and (min-width:1440px)
+{
     body 
     {
-        width:100%;
         max-width: 1440px;
+        margin: auto;
     }
-}
-
-
-
 
 
 
