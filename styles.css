@@ -31,47 +31,24 @@
 
 * 
 {
-    box-sizing:border-box;
+    box-sizing:border-box; /* remove margin and padding set by browser */
     margin: 0;
     padding: 0;
 }
-
 
 /* fonts */
 body
 {
     font-family: 'ralewayregular', 'arial', 'verdana', 'sans-serif';
-    font-size: 0.9em;
     color: black;
+    font-weight: 100;
 }
 
 h1, h2, h3, h4, form
 {
     font-family: 'ralewaybold', 'arial', 'verdana', 'sans-serif';
+    color: black;
 } 
-
-
-h1, h2
-{
-    font-size: 1.5em;
-}
-
-h3
-{
-    font-size: 1.2em;
-}
-
-h4
-{
-    font-size: 1.1em;
-}
-
-/* smaller stars */
-.fa-star
-{
-    font-size: 0.8em;
-}
-
 
 ul
 {
@@ -100,9 +77,7 @@ a[href^="mailto"]
 }
 
 
-
 /* borders to be removed, just to see parts more cleraly while working */
-
 
 /* header */
 
@@ -117,9 +92,8 @@ a[href^="mailto"]
     justify-content: space-between;
     align-items: center;
     padding: 20px 0 0 0;
-    font-size: 1.2em;
+    font-size: 1em;
 }
-
 
 #logo 
 {
@@ -144,7 +118,6 @@ a[href^="mailto"]
 
 }
 
-
 /* nav */
 #header-nav 
 {
@@ -165,7 +138,6 @@ a[href^="mailto"]
 {
     border-bottom: #f2f2f2 solid 3px;
     padding: 15px 0;
-    font-size: 0.9em;
 }
 
 .nav-div:focus p
@@ -181,8 +153,6 @@ a[href^="mailto"]
 }
 
 
-
-
 /* search section */
 
 #search-section
@@ -193,87 +163,76 @@ a[href^="mailto"]
     padding: 20px 20px;
 }
 
-
 #search-section h1
 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 1.2em;
 }
 
 #search-section p
 {
-    font-size: 1.1em;
-    line-height: 1.1em;
+    font-size: 1em;
     padding: 10px 0;
 }
 
-
 /* serach box */
-
-
 input[type=submit] /* hide 'rechercher' bouton */
 {
     visibility: hidden;
 }
 
-
-
-
 #search-box
 {
+    margin: 20px 0;
     width: 100%;
     max-width: 420px;
-    height: 49px;
+    height: 50px;
     display: block;
     position: relative;
     border-radius: 15px;
-    border: solid #f2f2f2 1px;
+    border: solid rgb(220, 220, 220) 1px;
     display: flex;
 }
-
 
 input[type=search] 
 {
     width: auto;
-    height: 49px;
+    min-width: 220px;
+    margin: auto;
+    height: 48px;
     display: block;
     border: none;
     position: absolute;
     left: 50px;
-    font-size: 1em;
     text-align: left;
-    padding: 0 10px;
+    padding: 0 15px;
 }
-
 
 ::placeholder
 { 
     color: black;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
  :-moz-placeholder { /* Firefox 18- */
     color: black;
     opacity: 1; 
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.4em;
  }
  
  ::-moz-placeholder {  /* Firefox 19+ */
     color: black;
     opacity: 1; 
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.4em;
  }
  
- 
-
-
 #map-marker
 {
-    width: 51px;
-    height: 51px;
+    width: 50px;
+    height: 50px;
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
     display: block;
@@ -283,7 +242,7 @@ input[type=search]
     position: absolute;
     top: -1px;
     left: -1px;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 input[type=submit] /* hide 'rechercher' bouton, style button for desktop */
@@ -291,11 +250,10 @@ input[type=submit] /* hide 'rechercher' bouton, style button for desktop */
     visibility: hidden;
 }
 
-
 #magnifying-glass
 {
-    width: 51px;
-    height: 51px;
+    width: 50px;
+    height: 50px;
     color: white;
     background-color: #0065FC;
     border-radius: 15px;
@@ -305,39 +263,17 @@ input[type=submit] /* hide 'rechercher' bouton, style button for desktop */
     align-items: center;
     position: absolute;
     top: -1px;
-    right: 1px;
-    font-size: 1.5em;
+    right: -1px;
+    font-size: 1.3em;
 }
-
-
-
-
-
-.white-on-blue-icon
-{
-    color:#ffffff;
-    background-color: #0065FC;
-}
-
-
-.blue-icon 
-{
-    color:#0065FC;
-}
-
-
-.grey-icon
-{
-    color: rgb(233, 232, 232);   
-}
-
-.grey-background
-{
-    background-color: #f2f2f2;
-}
-
 
 /* filters */
+#filters p
+{
+    font-size: 1.1em;
+    padding: 10px 0;
+}
+
 #filters /* title 'filters' over chekboxes */
 {
     display: flex;
@@ -351,8 +287,6 @@ input[type=submit] /* hide 'rechercher' bouton, style button for desktop */
     justify-content: flex-start;
 }
 
-
-
 input[type=checkbox] /* hide default checkbox */
 {
     visibility: hidden;
@@ -364,7 +298,6 @@ input[type=checkbox] /* hide default checkbox */
     border: solid #DEEBFF 3px; /* border light blue too, looks nicer */
 }
 
-
 .slider /* style visible checkbox */
 {
     width: auto;
@@ -373,18 +306,16 @@ input[type=checkbox] /* hide default checkbox */
     display: block;
     position: relative;
     border-radius: 25px;
-    border: solid rgb(202, 202, 202) 2px;
+    border: solid rgb(220, 220, 220) 2px;
     display: flex; /* icon and label in line */
     align-items: center;
 }
-
 
 #filters label
 {
     margin: 5px 15px 5px 43px;
     text-align: center;
 }
-
 
 #filters i
 {
@@ -402,6 +333,15 @@ input[type=checkbox] /* hide default checkbox */
     font-size: 1.3em;
 }
 
+.blue-icon 
+{
+    color:#0065FC;
+}
+
+.grey-icon
+{
+    color: rgb(220, 220, 220);   
+}
 
 #info
 {
@@ -409,8 +349,13 @@ input[type=checkbox] /* hide default checkbox */
   justify-content: flex-start;
   align-items: baseline; 
   width: 100%;
+  margin: 15px 0;
 }
 
+#info p
+{
+    font-size: 0.98em; /* make i smaller and change to 1em */
+}
 
 
 /* popular section */
@@ -425,8 +370,8 @@ input[type=checkbox] /* hide default checkbox */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
-
 
 #popular-list
 {
@@ -439,6 +384,7 @@ input[type=checkbox] /* hide default checkbox */
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
 #popular-title
@@ -450,9 +396,14 @@ input[type=checkbox] /* hide default checkbox */
     align-items: center;
 }
 
+#popular h2
+{
+    font-size: 1.4em;
+}
+
 .fa-chart-line
 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     transform: scale(1,1.2);
 }
 
@@ -461,13 +412,12 @@ input[type=checkbox] /* hide default checkbox */
     border: #0065FC solid 2px;
     display: block;
     background-color: #ffffff;
-    box-shadow: 5px 5px 5px rgb(233, 232, 232);
+    box-shadow: 5px 5px 5px rgb(232, 232, 232);
     border-radius: 20px;
     padding: 5px;
     margin: 5px auto;
     width: 100%; 
     max-width: 450px;
-    height: 195px;
     height: 145px;
     position: relative;
     display: flex; 
@@ -478,6 +428,7 @@ input[type=checkbox] /* hide default checkbox */
 {
     display: block;
     width: 100%; /* important! otherwise preview doesn't grow to 450px */
+    max-width: 127px;
     height: 130px;
     border-radius: 15px 0 0 15px;
 }
@@ -500,9 +451,20 @@ input[type=checkbox] /* hide default checkbox */
     justify-content: space-between;
 }
 
-#popular-title 
+#popular h4
 {
-    padding: 0 10px 0 10px;
+    font-size: 1em;
+    margin: 0 0 10px 0;
+}
+
+#popular p
+{
+    font-size: 0.9em;
+}
+
+#popular .fa-star
+{
+    font-size: 0.8em;
 }
 
 
@@ -525,6 +487,7 @@ input[type=checkbox] /* hide default checkbox */
 {
     width: 100%;
     margin: 20px 0;
+    font-size: 1.4em;
 }
 
 .accommodation-preview
@@ -532,7 +495,7 @@ input[type=checkbox] /* hide default checkbox */
     border: #0065FC solid 2px;
     display: block;
     background-color: #ffffff;
-    box-shadow: 5px 5px 5px rgb(233, 232, 232);
+    box-shadow: 5px 5px 5px rgb(232, 232, 232);
     border-radius: 20px;
     padding: 5px;
     margin: 5px auto;
@@ -552,7 +515,7 @@ input[type=checkbox] /* hide default checkbox */
     border-radius: 15px 15px 0 0 ;
 }
 
-#accommodation img
+#accommodation-list img
 {
     width: 100%;
     height: 100%;
@@ -568,17 +531,31 @@ input[type=checkbox] /* hide default checkbox */
     margin: 5px 10px;
 }
 
+#accommodation-list h4
+{
+font-size: 1em;
+}
+
+#accommodation-list p
+{
+    font-size: 0.9em;
+    margin: 2px 0;
+}
+
+#accommodation .fa-star
+{
+    font-size: 0.8em;
+}
+
 #accommodation-plus
 {
     width: 100%;
-    margin: 30px 0;
+    margin: 30px 0 10px 0;
+    font-size: 1em;
 }
 
 
-
-
 /* activities section */
-
 
 #activities-list
 {
@@ -597,6 +574,8 @@ input[type=checkbox] /* hide default checkbox */
 {
     width: 100%;
     margin: 20px 0;
+    padding: 0 0 0 5px;
+    font-size: 1.4em;
 }
 
 .div-123
@@ -606,6 +585,7 @@ input[type=checkbox] /* hide default checkbox */
     flex-direction: column;    
     justify-content: space-around;  
     align-items: center; 
+    position: relative;
 }
 
 .div-1,.div-23
@@ -622,11 +602,11 @@ input[type=checkbox] /* hide default checkbox */
     border: #0065FC solid 2px;
     background-color: #ffffff;
     display: block;
-    box-shadow: 5px 5px 5px rgb(233, 232, 232);
+    box-shadow: 5px 5px 5px rgb(232, 232, 232);
     border-radius: 20px;
     margin: 10px auto;
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     height: 190px;
     position: relative;
     display: flex;
@@ -640,6 +620,7 @@ input[type=checkbox] /* hide default checkbox */
     width: 100%;
     height: 135px;
     border-radius: 20px 20px 0 0 ;
+    top: 0px;
 }
 
 #activities img
@@ -653,23 +634,14 @@ input[type=checkbox] /* hide default checkbox */
 #activities-list h4 /* .activities-text */
 {
     width: 100%;
-    margin: 15px 15px;
+    margin: auto; /* important! so h4 vertically aligned when on 2 lines */
+    vertical-align: middle; /* important! so h4 vertically aligned when on 2 lines */
     padding: 0 15px;
+    font-size: 1em;
 }
-
-
-#activities h2 
-{
-    padding: 0 0 0 5px;
-}
-
-
-
 
 
 /* footer */
-
-
 
 #footer-nav
 {
@@ -677,30 +649,30 @@ input[type=checkbox] /* hide default checkbox */
     width: 100%;
     min-width: 375px;
     background-color: #F2F2F2;
-    padding: 30px 10px;
+    padding: 15px 10px 30px 10px;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
 }
-
 
 #nav-about, #nav-accommodation, #nav-assistance
 {
     width: 100%;
     text-align: left;
     margin: 10px;
-    font-size: 1.1em;    
     line-height: 2em;
+}
 
-
+#footer-nav h3
+{
+    font-size: 1.1em;
+    margin: 10px 0 10px 0;
 }
 
 #footer-nav ul
 {
-    font-size: 1.1em;
+    font-size: 1em;
 }
-
-
 
 
 
@@ -718,7 +690,7 @@ input[type=checkbox] /* hide default checkbox */
 }
 
 
-/* tablet landscape + large tablet 768-992px */
+/* tablet landscape + large tablet 768-1200px */
 @media all and (min-width:768px)
 {
 
@@ -732,14 +704,16 @@ input[type=checkbox] /* hide default checkbox */
 /* 2 previews in a row */
     .popular-preview
     {
-        max-width: 350px;
-    }
+        width: 100%;
+        max-width: 300px;
+}
 
 /* accommodation section */
-/* 2 previews in a row */
+/* 2 previews in a row */   
     .accommodation-preview
     {
-        max-width: 350px;
+        width: 100%;
+        max-width: 300px;
     }
 
 /* activities section */
@@ -847,12 +821,9 @@ input[type=checkbox] /* hide default checkbox */
     }
 }
 
-
-
-/* large tablet landscape + laptop + desktop 992-1440px */
-@media all and (min-width:992px)
+/* desktop 1200-1440px */
+@media all and (min-width:1200px)
 {
-
 /* header section */
 
     #header
@@ -860,7 +831,7 @@ input[type=checkbox] /* hide default checkbox */
         justify-content: flex-end;
         align-items: baseline;
         padding: 0 0 30px 0;
-        font-size: 1.2em;
+        position: relative;
     }
 
     #header-nav
@@ -870,7 +841,7 @@ input[type=checkbox] /* hide default checkbox */
         align-self:auto;
     }
 
-/* anchor border on top */
+    /* anchor border on top */
     .nav-div p
     {
         border-bottom: none; /* remove bottom border */
@@ -893,7 +864,6 @@ input[type=checkbox] /* hide default checkbox */
         color: #0065FC;
     }
 
-
     #logo 
     {
         width: 100px;
@@ -912,7 +882,6 @@ input[type=checkbox] /* hide default checkbox */
         margin: 0 50px;
         order: 3;
     }
-
 
 
 /* search section */
@@ -951,7 +920,7 @@ input[type=checkbox] /* hide default checkbox */
         position: absolute;
         top: -1px;
         right: 1px;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     #filters /* title 'filters' in line with chekboxes */
@@ -959,7 +928,7 @@ input[type=checkbox] /* hide default checkbox */
         display: flex;
         flex-direction: row;
         align-items: center;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     #filters-checkbox 
@@ -972,64 +941,77 @@ input[type=checkbox] /* hide default checkbox */
         margin: 15px;
     }
 
+
 /* accommodation and popular side by side */
+
     #popular-accommodation
     {
         padding: 0 50px;
         display: flex;
-        flex-direction: row-reverse; /* popular on top of accommodation */
+        flex-direction: row-reverse; 
         justify-content: space-between;
         align-items:center ;
+        position: relative;
     }
-
 
 /* popular section */
+
     #popular-list
-    {
+    {        
         width: 30%;
-        border-radius: 20px;
+        min-width: 350px;
+        height: 100%;
+        flex-direction: column;
+        justify-content:space-between;
+        border-radius: 20px;   
+        position: absolute;
+        right: 50px;
+        top: 0px;
     }
 
+    .popular-preview
+    {
+        height: auto;
+        min-width: 310px;
+        max-width: 345px;
+    }
 
 /* accommodation section */
+
     #accommodation-list
     {
-        width: 60%;
+        width: 65%;
         background-color: #F2F2F2;
-        border-radius: 20px;
+        border-radius: 20px;  
     }
+
+    .accommodation-preview
+    {
+        width: 250px;
+        min-width: 200px;
+        max-width: 300px;
+    } 
 
 
 /* activities section */
-    
+
     #activities-list
     {
         padding: 20px 50px 40px 50px;
     }
 
-    #activities h4
-    {
-        vertical-align: middle;
-    }
-
-
     .div-123
-        {
-            width: 50%;   
-            justify-content: space-around; 
-        }
-
-    
-/* footer section */
-
+    {
+        width: 50%;   
+        justify-content: space-around; 
+    }
+   
     #footer-nav
     {
         padding: 30px 50px;
     }
-
+        
 }
-
-
 
 
 /* super large screens > 1440px */
