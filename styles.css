@@ -1,3 +1,19 @@
+/* font less bold on Firefox */
+html 
+{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+}
+
+@-moz-document url-prefix() 
+{
+    body {
+      font-weight: lighter !important;
+    }
+}
+
+
 /* define raleway font */
 
 @font-face 
@@ -23,7 +39,6 @@
          url("fonts/raleway-bold-webfont.svg#ralewaybold") format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -36,12 +51,14 @@
     padding: 0;
 }
 
+
+
 /* fonts */
+
 body
 {
     font-family: 'ralewayregular', 'arial', 'verdana', 'sans-serif';
     color: black;
-    font-weight: 100;
 }
 
 h1, h2, h3, h4, form
@@ -54,7 +71,7 @@ ul
 {
     list-style-type: none; /* remove list markers */
     padding: 0; /* remove indentation of list items */
-    margin:0; /* remove indentation of list items */
+    margin: 0; /* remove indentation of list items */
 }
 
 /* remove underlining and color of links */
@@ -77,14 +94,11 @@ a[href^="mailto"]
 }
 
 
-/* borders to be removed, just to see parts more cleraly while working */
-
 /* header */
 
 /* logo + register */
 #header
 {
-    border: #0065FC solid 2px;
     width: 100%;
     min-width: 375px;
     display: flex;
@@ -157,7 +171,6 @@ a[href^="mailto"]
 
 #search-section
 {
-    border: solid 2px violet;
     width: 100%;
     min-width: 375px;
     padding: 20px 20px;
@@ -175,8 +188,8 @@ a[href^="mailto"]
     padding: 10px 0;
 }
 
-/* serach box */
-input[type=submit] /* hide 'rechercher' bouton */
+/* search box */
+input[type=submit] /* hide 'rechercher' button */
 {
     visibility: hidden;
 }
@@ -208,6 +221,7 @@ input[type=search]
     padding: 0 15px;
 }
 
+/* placeholder font */
 ::placeholder
 { 
     color: black;
@@ -215,19 +229,19 @@ input[type=search]
     font-size: 1.4em;
 }
 
- :-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder { /* Firefox 18- */
     color: black;
     opacity: 1; 
     font-weight: bold;
     font-size: 1.4em;
- }
+}
  
- ::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder {  /* Firefox 19+ */
     color: black;
     opacity: 1; 
     font-weight: bold;
     font-size: 1.4em;
- }
+}
  
 #map-marker
 {
@@ -298,7 +312,7 @@ input[type=checkbox] /* hide default checkbox */
     border: solid #DEEBFF 3px; /* border light blue too, looks nicer */
 }
 
-.slider /* style visible checkbox */
+.slider /* add style to visible checkbox */
 {
     width: auto;
     height: 50px;
@@ -333,39 +347,43 @@ input[type=checkbox] /* hide default checkbox */
     font-size: 1.3em;
 }
 
-.blue-icon 
-{
-    color:#0065FC;
-}
-
-.grey-icon
-{
-    color: rgb(220, 220, 220);   
-}
-
 #info
 {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline; 
+  align-items:baseline; 
   width: 100%;
   margin: 15px 0;
 }
 
+#icon-info
+{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    font-size: 0.75em;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 50px;
+    padding: 8px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;  
+}
+
 #info p
 {
-    font-size: 0.98em; /* make i smaller and change to 1em */
+    font-size: 1em;
 }
 
 
-/* popular section */
+/* popular-accommodation section */
 
 #popular-accommodation
 {
-    border: turquoise solid 2px;
     width: 100%;
-    min-width: 375px;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -373,12 +391,14 @@ input[type=checkbox] /* hide default checkbox */
     position: relative;
 }
 
+/* popular section */
+
 #popular-list
 {
-    border: orange solid 2px;
     background-color: #F2F2F2;
     width: 100%;
-    height: auto;
+    min-width: 375px;
+    height: 100%;
     padding: 20px 20px 30px 20px;
     display: flex;
     flex-wrap: wrap;
@@ -396,7 +416,7 @@ input[type=checkbox] /* hide default checkbox */
     align-items: center;
 }
 
-#popular h2
+#popular-list h2
 {
     font-size: 1.4em;
 }
@@ -407,43 +427,46 @@ input[type=checkbox] /* hide default checkbox */
     transform: scale(1,1.2);
 }
 
+.div-pop1
+{
+    width: 100%;
+    max-width: 450px;
+}
+
 .popular-preview
 {
-    border: #0065FC solid 2px;
-    display: block;
     background-color: #ffffff;
     box-shadow: 5px 5px 5px rgb(232, 232, 232);
     border-radius: 20px;
     padding: 5px;
     margin: 5px auto;
     width: 100%; 
-    max-width: 450px;
     height: 145px;
     position: relative;
     display: flex; 
     flex-direction: row; 
+    flex: 0 0 100%;
 }
 
 .popular-preview-img
 {
-    display: block;
-    width: 100%; /* important! otherwise preview doesn't grow to 450px */
+    width: 100%; 
     max-width: 127px;
     height: 130px;
     border-radius: 15px 0 0 15px;
+    position: relative;
 }
 
-#popular img 
+#popular-list img 
 {
-    width: 100%; /* important! otherwise preview doesn't grow to 450px */
-    height: 130px;
+    width: 100%; 
+    height: 135px;
     object-fit: cover;
     border-radius: 15px 0 0 15px ;
 }
 
 .popular-text
 {
-    display: block;
     width: 100%;
     margin: 10px 20px;
     display: flex;
@@ -451,20 +474,30 @@ input[type=checkbox] /* hide default checkbox */
     justify-content: space-between;
 }
 
-#popular h4
+#popular-list h4
 {
     font-size: 1em;
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
 }
 
-#popular p
+#popular-list p
 {
     font-size: 0.9em;
 }
 
-#popular .fa-star
+#popular-list .fa-star
 {
     font-size: 0.8em;
+}
+
+.blue-icon 
+{
+    color:#0065FC;
+}
+
+.grey-icon
+{
+    color: rgb(220, 220, 220);   
 }
 
 
@@ -472,9 +505,9 @@ input[type=checkbox] /* hide default checkbox */
 
 #accommodation-list
 {
-    border: orange solid 2px;
     width: 100%;
-    height: auto;
+    min-width: 375px;
+    height: 100%;
     padding: 20px 20px 10px 20px;
     display: flex;
     flex-wrap: wrap;
@@ -490,10 +523,14 @@ input[type=checkbox] /* hide default checkbox */
     font-size: 1.4em;
 }
 
+.div-acc1
+{
+    width: 100%;
+    max-width: 450px;
+}
+
 .accommodation-preview
 {
-    border: #0065FC solid 2px;
-    display: block;
     background-color: #ffffff;
     box-shadow: 5px 5px 5px rgb(232, 232, 232);
     border-radius: 20px;
@@ -509,7 +546,6 @@ input[type=checkbox] /* hide default checkbox */
 
 .accommodation-preview-img
 {
-    display: block;
     width: 100%;
     height: 115px;
     border-radius: 15px 15px 0 0 ;
@@ -525,7 +561,6 @@ input[type=checkbox] /* hide default checkbox */
 
 .accommodation-text
 {
-    display: block;
     width: 100%;
     line-height: 1.3em;
     margin: 5px 10px;
@@ -542,7 +577,12 @@ font-size: 1em;
     margin: 2px 0;
 }
 
-#accommodation .fa-star
+#accommodation-list strong
+{
+    font-weight: bold;
+}
+
+#accommodation-list .fa-star
 {
     font-size: 0.8em;
 }
@@ -559,7 +599,6 @@ font-size: 1em;
 
 #activities-list
 {
-    border: orange solid 2px;
     width: 100%;
     min-width: 375px;
     height: auto;
@@ -567,7 +606,8 @@ font-size: 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items:center;  
+    align-items:stretch;
+    position: relative; 
 }
 
 #activities-list h2
@@ -578,35 +618,35 @@ font-size: 1em;
     font-size: 1.4em;
 }
 
-.div-123
+.div-1
 {
     width: 100%;
-    display: flex;
-    flex-direction: column;    
-    justify-content: space-around;  
-    align-items: center; 
-    position: relative;
+    max-width: 450px;
 }
 
-.div-1,.div-23
+.div-23
 {
     width: 100%;
+    max-width: 450px;
     display: flex;
-    flex-direction: column;    
-    justify-content: space-between; 
-    align-items: center;
+    flex-direction: column;
+    justify-content:space-between; /* important! so top and bottom are aligned */
+    align-items:stretch;
+}
+
+.div-2, .div-3
+{
+    width: 100%;
 }
 
 .activities-preview
 {
-    border: #0065FC solid 2px;
     background-color: #ffffff;
-    display: block;
     box-shadow: 5px 5px 5px rgb(232, 232, 232);
     border-radius: 20px;
     margin: 10px auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     height: 190px;
     position: relative;
     display: flex;
@@ -616,7 +656,6 @@ font-size: 1em;
 
 .activities-preview-img
 {
-    display: block;
     width: 100%;
     height: 135px;
     border-radius: 20px 20px 0 0 ;
@@ -631,7 +670,7 @@ font-size: 1em;
     border-radius: 20px 20px 0 0 ;
 }
 
-#activities-list h4 /* .activities-text */
+#activities-list h4 
 {
     width: 100%;
     margin: auto; /* important! so h4 vertically aligned when on 2 lines */
@@ -641,11 +680,10 @@ font-size: 1em;
 }
 
 
-/* footer */
+/* footer section */
 
 #footer-nav
 {
-    border: #0065FC solid 2px;
     width: 100%;
     min-width: 375px;
     background-color: #F2F2F2;
@@ -690,50 +728,49 @@ font-size: 1em;
 }
 
 
-/* tablet landscape + large tablet 768-1200px */
+/* tablet landscape + large tablet 768-1280px */
 @media all and (min-width:768px)
 {
 
 /* header section */
 /* no changes */
 
+
 /* search section */
 /* no changes */
 
+
 /* popular section */
-/* 2 previews in a row */
-    .popular-preview
+
+    /* 2 previews in a row */
+    .div-pop1
     {
-        width: 100%;
-        max-width: 300px;
-}
+        width: 50%;
+        min-width: 450px;
+        margin: 0 10px;
+    }
+
 
 /* accommodation section */
-/* 2 previews in a row */   
-    .accommodation-preview
+
+    /* 2 previews in a row */   
+    .div-acc1
     {
-        width: 100%;
-        max-width: 300px;
+        width: 50%;
+        min-width: 450px;
+        margin: 0 10px;
     }
 
 /* activities section */
-/* 2 previews in a row */
-    .div-123
-    {
-        flex-direction: row; /* need to specify row because in mobile version flex-direction is column */
-        align-items: stretch; 
-        margin: 10px 0;
-    }
-
+    /* 2 previews in a row */
+    
     .div-1,.div-23
     {
-        width: 50%;
-        max-width: 450px;
-        align-items: stretch;
+        width: 45%;
         margin: 0 10px ;
     }
 
-/* different sizes of previews */
+    /* different sizes of previews */
     .portrait
     {
         width: 100%;
@@ -764,7 +801,7 @@ font-size: 1em;
         height: 240px; 
     }
 
-/* different sizes of images */
+    /* different sizes of images */
     .portrait .activities-preview-img
     {
         width: 100%;
@@ -807,8 +844,8 @@ font-size: 1em;
 
 
 /* footer section */
-/* sections in a row */
 
+    /* sections in a row */
     #footer-nav
     {
         flex-direction: row;
@@ -821,8 +858,9 @@ font-size: 1em;
     }
 }
 
-/* desktop 1200-1440px */
-@media all and (min-width:1200px)
+
+/* laptop + desktop 1280-1800px */
+@media all and (min-width:1280px)
 {
 /* header section */
 
@@ -885,6 +923,7 @@ font-size: 1em;
 
 
 /* search section */
+
     #search-section
     {
         padding: 20px 50px;
@@ -954,45 +993,50 @@ font-size: 1em;
         position: relative;
     }
 
+
 /* popular section */
 
     #popular-list
     {        
-        width: 30%;
-        min-width: 350px;
-        height: 100%;
+        width: 31%;
         flex-direction: column;
         justify-content:space-between;
         border-radius: 20px;   
-        position: absolute;
-        right: 50px;
-        top: 0px;
     }
 
-    .popular-preview
+    .div-pop1
     {
-        height: auto;
-        min-width: 310px;
-        max-width: 345px;
+        width: 100%;
+        min-width: 300px;
+        max-width: 450px;
+        margin: 0;
     }
+
 
 /* accommodation section */
 
     #accommodation-list
     {
-        width: 65%;
+        width: 66%;
+        height: 572px; /* if 100%, smaller than popular by 6 px... */
         background-color: #F2F2F2;
         border-radius: 20px;  
     }
 
-    .accommodation-preview
+    .div-acc1
     {
-        width: 250px;
-        min-width: 200px;
-        max-width: 300px;
-    } 
+        width: 31%;
+        min-width: 235px;
+        max-width: 450px;
+        margin: 0;
+    }
 
+    #accommodation-plus
+    {
+        padding: 0 10px;
+    }
 
+    
 /* activities section */
 
     #activities-list
@@ -1000,12 +1044,13 @@ font-size: 1em;
         padding: 20px 50px 40px 50px;
     }
 
-    .div-123
+    .div-1,.div-23
     {
-        width: 50%;   
-        justify-content: space-around; 
+        width: 23%;
     }
-   
+
+
+/* footer section */    
     #footer-nav
     {
         padding: 30px 50px;
@@ -1014,13 +1059,13 @@ font-size: 1em;
 }
 
 
-/* super large screens > 1440px */
-/* limit page width to 1440px */
-@media all and (min-width:1440px)
+/* super large screens > 1800px */
+/* limit page width to 1800px */
+@media all and (min-width:1800px)
 {
     body 
     {
-        max-width: 1440px;
+        max-width: 1800px;
         margin: auto;
     }
 }
