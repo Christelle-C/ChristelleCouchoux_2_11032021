@@ -309,7 +309,6 @@ input[type=checkbox] /* hide default checkbox */
 .slider:hover 
 {
     background: #DEEBFF;
-    border: solid #DEEBFF 3px; /* border light blue too, looks nicer */
 }
 
 .slider /* add style to visible checkbox */
@@ -343,7 +342,7 @@ input[type=checkbox] /* hide default checkbox */
     vertical-align: middle;
     position: absolute;
     top: -2px;
-    left: -2px;
+    left: -3px;
     font-size: 1.3em;
 }
 
@@ -728,7 +727,7 @@ font-size: 1em;
 }
 
 
-/* tablet landscape + large tablet 768-1280px */
+/* tablet landscape + large tablet 768-1200px */
 @media all and (min-width:768px)
 {
 
@@ -745,8 +744,8 @@ font-size: 1em;
     /* 2 previews in a row */
     .div-pop1
     {
-        width: 50%;
-        min-width: 450px;
+        width: 47%;
+        max-width: 450px;
         margin: 0 10px;
     }
 
@@ -756,8 +755,8 @@ font-size: 1em;
     /* 2 previews in a row */   
     .div-acc1
     {
-        width: 50%;
-        min-width: 450px;
+        width: 47%;
+        max-width: 450px;
         margin: 0 10px;
     }
 
@@ -766,7 +765,7 @@ font-size: 1em;
     
     .div-1,.div-23
     {
-        width: 45%;
+        width: 47%;
         margin: 0 10px ;
     }
 
@@ -859,8 +858,8 @@ font-size: 1em;
 }
 
 
-/* laptop + desktop 1280-1800px */
-@media all and (min-width:1280px)
+/* laptop + desktop 1200-1800px */
+@media all and (min-width:1200px)
 {
 /* header section */
 
@@ -883,7 +882,7 @@ font-size: 1em;
     .nav-div p
     {
         border-bottom: none; /* remove bottom border */
-        border-top: #f2f2f2 solid 3px;
+        border-top: solid 3px transparent; /* top border still there but not visible*/
         padding: 45px 0 0 0;
         margin: 0;
     }
@@ -947,7 +946,7 @@ font-size: 1em;
     #submit
     {
         width: 135px;
-        height: 51px;
+        height: 50px;
         color: white;
         background-color: #0065FC;
         border-style: none; /* to cancel the user agent stylesheet settings */
@@ -958,7 +957,7 @@ font-size: 1em;
         align-items: center;
         position: absolute;
         top: -1px;
-        right: 1px;
+        right: -1px;
         font-size: 1.2em;
     }
 
@@ -999,6 +998,7 @@ font-size: 1em;
     #popular-list
     {        
         width: 31%;
+        min-width: 340px;
         flex-direction: column;
         justify-content:space-between;
         border-radius: 20px;   
@@ -1017,7 +1017,7 @@ font-size: 1em;
 
     #accommodation-list
     {
-        width: 66%;
+        width: 67%;
         height: 572px; /* if 100%, smaller than popular by 6 px... */
         background-color: #F2F2F2;
         border-radius: 20px;  
@@ -1026,7 +1026,7 @@ font-size: 1em;
     .div-acc1
     {
         width: 31%;
-        min-width: 235px;
+        min-width: 230px;
         max-width: 450px;
         margin: 0;
     }
