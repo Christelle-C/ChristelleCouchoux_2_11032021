@@ -10,30 +10,29 @@
 </head>
 
 <body>
-    <header id="header">
+    <header>
         <div id="logo">
             <img src="images/logo/Reservia.png" alt="logo de Reservia">
         </div>
 
         <div id="register">
             <a href="#" title="Inscrivez-vous sur Reservia">
-                <p>S'inscrire</p>
+                <span class="blue-text">S'inscrire</span>
             </a>
         </div>
-
+        
         <nav id="header-nav">
             <div class="nav-div">
                 <a href="#accommodation-list" title="Hébergements liés à votre recherche" class="anchor">
-                    <p>Hébergements</p>
+                    <span class="anchor-text">Hébergements</span>
                 </a>
             </div>
             <div class="nav-div">
                 <a href="#activities" title="Activités liées à votre recherche" class="anchor">
-                    <p>Activités</p>
+                    <span class="anchor-text">Activités</span>
                 </a>
             </div>
         </nav>
-
     </header>
 
     <main>
@@ -44,13 +43,13 @@
 
             <form method="post" action="#">
                 <!-- search box -->
+                <!-- aria-hidden="true" so icons invisible to screen readers -->
                 <div id="search-box">
                     <i id="map-marker" class="fas fa-map-marker-alt" aria-hidden="true"></i>
                     <input type="search" placeholder="Marseille, France" name="search" id="search" />
                     <input type="submit" value="Rechercher" name="submit" id="submit" />
                     <button type="button" aria-label="rechercher"><i id="magnifying-glass" class="fas fa-search" aria-hidden="true"></i></button>
                 </div>
-
                 <!-- filters -->
                 <div id="filters">
                     <p>Filtres</p>
@@ -80,7 +79,7 @@
             </form>
 
             <div id="info">
-                <span id="icon-info" aria-hidden="true">
+                <span id="info-icon" aria-hidden="true">
                     <i class="fas fa-info"></i>
                 </span>
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
@@ -94,266 +93,268 @@
                     <h2>Les plus populaires</h2>
                     <i class="fas fa-chart-line" aria-hidden="true"></i>
                 </div>
-                <div class="div-pop1">
+                <div class="popular-preview-div">
                     <a href="#" title="Aller à la page 'Hôtel Le soleil du matin'">
-                        <div class="popular-preview">
-                            <div class="popular-preview-img">
+                        <span class="popular-preview">
+                            <span class="popular-preview-img">
+                                <!-- aria-hidden="true" so decorative images invisible to screen readers -->
                                 <img src="images/popular/hotel-le-soleil-du-matin.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="popular-text">
-                                <div>
-                                    <h4>Hôtel Le soleil du matin</h4>
-                                    <p>Nuit à partir de 128€</p>
-                                </div>
-                                <p aria-label="hébergement 5 étoiles" role="img">
+                            </span>
+                            <span class="popular-preview-text">
+                                <span>
+                                    <span class="hotel-name">Hôtel Le soleil du matin</span>
+                                    <span class="hotel-price">Nuit à partir de 128€</span>
+                                </span>
+                                <!-- aria-label to add info given by icons invisible to screen readers -->
+                                <!-- role=img so label is read -->
+                                <span aria-label="hébergement 5 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </span>
+                            </span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-pop1">
+                <div class="popular-preview-div">
                     <a href="#" title="Aller à la page 'Au coeur de l'eau Chambres d'hôtes'">
-                        <div class="popular-preview">
-                            <div class="popular-preview-img">
+                        <span class="popular-preview">
+                            <span class="popular-preview-img">
                                 <img src="images/popular/au-coeur-de-l-eau-chambres-d-hotes.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="popular-text">
-                                <div>
-                                    <h4>Au coeur de l'eau Chambres d'hôtes</h4>
-                                    <p>Nuit à partir de 71€</p>
-                                </div>
-                                <p aria-label="hébergement 4 étoiles" role="img">
+                            </span>
+                            <span class="popular-preview-text">
+                                <span>
+                                    <span class="hotel-name">Au coeur de l'eau Chambres d'hôtes</span>
+                                    <span class="hotel-price">Nuit à partir de 71€</span>
+                                </span>
+                                <span aria-label="hébergement 4 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star grey-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </span>
+                            </span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-pop1">
+                <div class="popular-preview-div">
                     <a href="#" title="Aller à la page 'Hôtel Tout bleu et Blanc'">
-                        <div class="popular-preview">
-                            <div class="popular-preview-img">
+                        <span class="popular-preview">
+                            <span class="popular-preview-img">
                                 <img src="images/popular/hotel-tout-bleu-et-blanc.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="popular-text">
-                                <div>
-                                    <h4>Hôtel Tout bleu et Blanc</h4>
-                                    <p>Nuit à partir de 68€</p>
-                                </div>
-                                <p aria-label="hébergement 4 étoiles" role="img">
+                            </span>
+                            <span class="popular-preview-text">
+                                <span>
+                                    <span class="hotel-name">Hôtel Tout bleu et Blanc</span>
+                                    <span class="hotel-price">Nuit à partir de 68€</span>
+                                </span>
+                                <span aria-label="hébergement 4 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star grey-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </span>
+                            </span>
+                        </span>
                     </a>
                 </div>
             </div>
             <!--accommodation section-->
             <div id="accommodation-list">
                 <h2>Hébergements à Marseille</h2>
-                <div class="div-acc1">
+                <div class="accommodation-preview-div">
                     <a href="#" title="Aller à la page 'Auberge de la Cannebière'">
-                        <div class="accommodation-preview">
-                            <div class="accommodation-preview-img">
+                        <span class="accommodation-preview">
+                            <span class="accommodation-preview-img">
                                 <img src="images/accommodation/auberge-de-la-cannebiere.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="accommodation-text">
-                                <h4>Auberge de la Cannebière</h4>
-                                <p>Nuit à partir de <strong>25€</strong></p>
-                                <p>
+                            </span>
+                            <span class="accommodation-preview-text">
+                                <span class="hotel-name">Auberge de la Cannebière</span>
+                                <span class="hotel-price">Nuit à partir de <em>25€</em></span>
+                                <span aria-label="hébergement 4 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star grey-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </span>
+                            </span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-acc1">
+                <div class="accommodation-preview-div">
                     <a href="#" title="Aller à la page 'Hôtel du Port'">
-                        <div class="accommodation-preview">
-                            <div class="accommodation-preview-img">
+                        <span class="accommodation-preview">
+                            <span class="accommodation-preview-img">
                                 <img src="images/accommodation/hotel-du-port.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="accommodation-text">
-                                <h4>Hôtel du Port</h4>
-                                <p>Nuit à partir de 52€</p>
-                                <p>
+                            </span>
+                            <span class="accommodation-preview-text">
+                                <span class="hotel-name">Hôtel du Port</span>
+                                <span class="hotel-price">Nuit à partir de 52€</span>
+                                <span aria-label="hébergement 5 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </span>
+                            </span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-acc1">
+                <div class="accommodation-preview-div">
                     <a href="#" title="Aller à la page 'Hôtel Les Mouettes'">
-                        <div class="accommodation-preview">
-                            <div class="accommodation-preview-img">
+                        <span class="accommodation-preview">
+                            <span class="accommodation-preview-img">
                                 <img src="images/accommodation/hotel-les-mouettes.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="accommodation-text">
-                                <h4>Hôtel Les mouettes</h4>
-                                <p>Nuit à partir de 76€</p>
-                                <p>
+                            </span>
+                            <span class="accommodation-preview-text">
+                                <span class="hotel-name">Hôtel Les mouettes</span>
+                                <span class="hotel-price">Nuit à partir de 76€</span>
+                                <span aria-label="hébergement 4 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star grey-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </span>
+                            </span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-acc1">
+                <div class="accommodation-preview-div">
                     <a href="#" title="Aller à la page 'Hôtel de la mer'">
-                        <div class="accommodation-preview">
-                            <div class="accommodation-preview-img">
+                        <span class="accommodation-preview">
+                            <span class="accommodation-preview-img">
                                 <img src="images/accommodation/hotel-de-la-mer.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="accommodation-text">
-                                <h4>Hôtel de la mer</h4>
-                                <p>Nuit à partir de 46€</p>
-                                <p>
+                            </span>
+                            <span class="accommodation-preview-text">
+                                <span class="hotel-name">Hôtel de la mer</span>
+                                <span class="hotel-price">Nuit à partir de 46€</span>
+                                <span aria-label="hébergement 3 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star grey-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star grey-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </sapn>
+                            </span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-acc1">
+                <div class="accommodation-preview-div">
                     <a href="#" title="Aller à la page 'Auberge Le Panier'">
-                        <div class="accommodation-preview">
-                            <div class="accommodation-preview-img">
+                        <span class="accommodation-preview">
+                            <span class="accommodation-preview-img">
                                 <img src="images/accommodation/auberge-le-panier.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="accommodation-text">
-                                <h4>Auberge Le Panier</h4>
-                                <p>Nuit à partir de <strong>23€</strong></p>
-                                <p>
+                            </span>
+                            <span class="accommodation-preview-text">
+                                <span class="hotel-name">Auberge Le Panier</span>
+                                <span class="hotel-price">Nuit à partir de <em>23€</em></span>
+                                <span aria-label="hébergement 4 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star grey-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </sapn>
+                            </span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-acc1">
+                <div class="accommodation-preview-div">
                     <a href="#" title="Aller à la page 'Hôtel chez Amina'">
-                        <div class="accommodation-preview">
-                            <div class="accommodation-preview-img">
+                        <span class="accommodation-preview">
+                            <span class="accommodation-preview-img">
                                 <img src="images/accommodation/hotel-chez-amina.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <div class="accommodation-text">
-                                <h4>Hôtel chez Amina</h4>
-                                <p>Nuit à partir de 96€</p>
-                                <p>
+                            </span>
+                            <span class="accommodation-preview-text">
+                                <span class="hotel-name">Hôtel chez Amina</span>
+                                <span class="hotel-price">Nuit à partir de 96€</span>
+                                <span aria-label="hébergement 5 étoiles" role="img">
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
                                     <i class="fas fa-star blue-icon" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                        </div>
+                                </span>
+                            </span>
+                        </span>
                     </a>
                 </div>
-                <h3 id="accommodation-plus">Afficher plus</h3>
+                <p id="accommodation-show-more">Afficher plus</p>
             </div>
         </section>
 
         <!--activities section-->
         <section id="activities">
-            <!-- ADD aria-hidden="true" so photos visible in browser but invisible for assistive technology -->
             <div id="activities-list">
                 <h2>Activités à Marseille</h2>
-                <div class="div-1">
+                <div class="activities-1preview-div">
                     <a href="#" title="Aller à la page 'Vieux Port'">
-                        <div class="activities-preview portrait">
-                            <div class="activities-preview-img">
+                        <span class="activities-preview portrait">
+                            <span class="activities-preview-img">
                                 <img src="images/activities/vieux-port.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <h4>Vieux Port</h4>
-                        </div>
+                            </span>
+                            <span class="activity-name">Vieux Port</span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-23">
-                    <div class="div-2">
+                <div class="activities-2previews-div">
+                    <div class="activities-preview-div">
                         <a href="#" title="Aller à la page 'Fort de Pomègues'">
-                            <div class="activities-preview large">
-                                <div class="activities-preview-img">
+                            <span class="activities-preview large">
+                                <span class="activities-preview-img">
                                     <img src="images/activities/fort-de-pomegues.jpg" alt="" aria-hidden="true">
-                                </div>
-                                <h4>Fort de Pomègues</h4>
-                            </div>
+                                </span>
+                                <span class="activity-name">Fort de Pomègues</span>
+                            </span>
                         </a>
                     </div>
-                    <div class="div-3">    
+                    <div class="activities-preview-div">    
                         <a href="#" title="Aller à la page 'Îles du Frioul'">
-                            <div class="activities-preview small">
-                                <div class="activities-preview-img">
+                            <span class="activities-preview small">
+                                <span class="activities-preview-img">
                                     <img src="images/activities/iles-du-frioul.jpg" alt="" aria-hidden="true">
-                                </div>
-                                <h4>Îles du Frioul</h4>
-                            </div>
+                                </span>
+                                <span class="activity-name">Îles du Frioul</span>
+                            </span>
                         </a>
                     </div>
                 </div>
-                <div class="div-1">
+                <div class="activities-1preview-div">
                     <a href="#" title="Aller à la page 'Parc National des Calanques'">
-                        <div class="activities-preview portrait">
-                            <div class="activities-preview-img">
+                        <span class="activities-preview portrait">
+                            <span class="activities-preview-img">
                                 <img src="images/activities/parc-national-des-calanques.jpg" alt="" aria-hidden="true">
-                            </div>
-                            <h4>Parc National des Calanques</h4>
-                        </div>
+                            </span>
+                            <span class="activity-name">Parc National des Calanques</span>
+                        </span>
                     </a>
                 </div>
-                <div class="div-23">
-                    <div class="div-2">
+                <div class="activities-2previews-div">
+                    <div class="activities-preview-div">
                         <a href="#" title="Aller à la page 'Notre-Dame-de-la-Garde'">
-                            <div class="activities-preview smallmedium">
-                                <div class="activities-preview-img">
+                            <span class="activities-preview smallmedium">
+                                <span class="activities-preview-img">
                                     <img src="images/activities/notre-dame-de-la-garde.jpg" alt="" aria-hidden="true">
-                                </div>
-                                <h4>Notre-Dame-de-la-Garde</h4>
-                            </div>
+                                </span>
+                                <span class="activity-name">Notre-Dame-de-la-Garde</span>
+                            </span>
                         </a>
                     </div>
-                    <div class="div-3">
+                    <div class="activities-preview-div">
                         <a href="#" title="Aller à la page 'Parc Longchamp'">
-                            <div class="activities-preview bigmedium">
-                                <div class="activities-preview-img">
+                            <span class="activities-preview bigmedium">
+                                <span class="activities-preview-img">
                                     <img src="images/activities/parc-longchamp.jpg" alt="" aria-hidden="true">
-                                </div>
-                                <h4>Parc Longchamp</h4>
-                            </div>
+                                </span>
+                                <span class="activity-name">Parc Longchamp</span>
+                            </span>
                         </a>
                     </div>
                 </div>
