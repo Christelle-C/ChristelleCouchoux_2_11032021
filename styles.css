@@ -63,6 +63,7 @@ body
 {
     font-family: 'ralewayregular', 'arial', 'verdana', 'sans-serif';
     color: black;
+    background-color: white;
 }
 
 h1, h2, h3, form
@@ -720,7 +721,6 @@ phone + tablet portrait 375-768px (default) */
         width:100%;
         min-width: 375px;
         margin: auto;
-        background-color: white;
     }
 }
 
