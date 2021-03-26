@@ -720,6 +720,7 @@ phone + tablet portrait 375-768px (default) */
         width:100%;
         min-width: 375px;
         margin: auto;
+        background-color: white;
     }
 }
 
